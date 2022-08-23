@@ -1,0 +1,29 @@
+
+        <!doctype html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport"
+                      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <meta content="rss-parser-client.netlify.app" property="og:site_name">
+                <meta content="Lifehacker RSS parser" property="og:title">
+                <meta content="Lifehacker's RSS client application for viewing posts" property="og:description">
+                <link rel="icon" href="favicon-192x192.png" sizes="192x192"><link rel="icon" href="favicon-32x32.png" sizes="32x32">
+                <title>LifeHacker Rss</title>
+                <link href=bundle.index-VMQWG2DF.css rel="stylesheet">
+            </head>
+            <body>
+                <div id="root"></div>
+                <script src=bundle.index-V37CXWGL.js></script>
+                <script>
+const evtSource = new EventSource('http://localhost:3000/subscribe');
+evtSource.onopen = function () { console.log('open') };
+evtSource.onerror = function () { console.log('error') };
+evtSource.onmessage = function () {    console.log('message');
+     window.location.reload();
+}
+</script>
+            </body>
+        </html>
+                      
